@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
         //In case you are not in main menu
         if (goal != null)
         {
+            //go to main menu
+            if (saveManager.Level > goal.LastLevel) { saveManager.Level = goal.LastLevel; saveManager.SaveData(); LoadScene(0); return; }
             goal.Lvl = saveManager.Level;
             spawnControl.Level = saveManager.Level;
             goalBar.CurrentLevel = goal.Lvl;

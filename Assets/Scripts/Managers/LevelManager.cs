@@ -38,6 +38,7 @@ public class LevelManager : MonoBehaviour
         windowPop.PopRestartOut();
         windowPop.PopLostMessage();
         stopWatch.StopGame();
+        player.Animator.SetTrigger("Lost");
     }
     void PlayerEarnPoint()
     {
